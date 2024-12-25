@@ -1,0 +1,243 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f9;
+            background: #ffffcc;
+        }
+
+        header {
+            background: linear-gradient(to right, #4facfe, #00f2fe);
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        .booking-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        .booking-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .booking-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .form-group button {
+            width: 100%;
+            padding: 12px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .form-group button:hover {
+            background: #00c6fb;
+        }
+
+        .popular-destinations {
+            text-align: center;
+            padding: 5px 3px;
+        }
+
+        .popular-destinations h3 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+
+        .destination-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .destination-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .destination-card h4 {
+            margin: 15px;
+            font-size: 1.2rem;
+            color: #333;
+        }
+
+        .destination-card p {
+            margin: 15px;
+            color: #666;
+        }
+
+        img{
+            width:1000px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Plan Your Next Journey</h1>
+        <p>Book your dream trip with ease and confidence</p>
+    </header>
+
+    <section class="booking-section">
+        <div class="booking-container">
+            <h2>Book Your Trip</h2>
+            <div class="form-group">
+                <label for="destination">Destination</label>
+                <select id="destination">
+                    <option value="">Choose a destination</option>
+                    <option value="paris">Paris</option>
+                    <option value="tokyo">Tokyo</option>
+                    <option value="tokyo">New York</option>
+                    <option value="tokyo">Rome</option>
+                    <option value="dubai">Dubai</option>
+                    <option value="dubai">Bangkok</option>
+                    <option value="dubai">London</option>
+                    <option value="sydney">Sydney</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" id="checkin">
+            </div>
+            <div class="form-group">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" id="checkout">
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" min="1" placeholder="Enter number of guests">
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="popular-destinations">
+    <h3>Popular destination</h3>
+           <section class="destinations">
+        <div class="destination">
+            <img src="paris.jpg" alt="Paris">
+            <h3>Paris</h3>
+            <p>The city of love and lights awaits you!</p>
+        </div>
+        <div class="destination">
+            <img src="japan.jpg" alt="Tokyo">
+            <h3>Tokyo</h3>
+            <p>A vibrant blend of tradition and technology, where ancient temples meet futuristic skyscrapers.</p>
+        </div>
+        <div class="destination">
+            <img src="new york.jpg" alt="New York">
+            <h3>New York</h3>
+            <p>The city that never sleeps, a bustling hub of culture, diversity, and endless possibilities.</p>
+        </div>
+        <div class="destination">
+            <img src="rome.jpg" alt="Rome">
+            <h3>Rome</h3>
+            <p>A timeless city where ancient history and modern life coexist, home to the Roman Empire’s legacy.</p>
+        </div>
+        <div class="destination">
+            <img src="dubai.jpg" alt="Dubai">
+            <h3>Dubai</h3>
+            <p>A dazzling metropolis of innovation, luxury, and towering skyscrapers in the heart of the desert.</p>
+        </div>
+        <div class="destination">
+            <img src="bangkok.jpg" alt="Bangkok">
+            <h3>Bangkok</h3>
+            <p>A vibrant city of contrasts, known for its rich culture, bustling markets, and vibrant nightlife.</p>
+        </div>
+        </div>
+        <div class="destination">
+            <img src="london.jpg" alt="	London">
+            <h3>London</h3>
+            <p> A historic city that seamlessly blends tradition with modernity, home to iconic landmarks and cultural diversity.</p>
+        </div>
+        <div class="destination">
+            <img src="sydney.jpg" alt="Sydney">
+            <h3>Sydney</h3>
+            <p>A stunning coastal city known for its beautiful harbor, iconic Opera House, and relaxed atmosphere.</p>
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 WanderSphere. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
